@@ -10,7 +10,7 @@
 
 如果你是后端开发，请从最后面开始往上看😄
 
-![流程图](./static/process-design1.png)
+![流程图](https://github.com/griabcrh/vue-activiti-demo/blob/master/vue-activiti-demo/static/process-design1.png)
 
 ## 一 前端启动项目🌟
 
@@ -26,6 +26,10 @@ npm run dev
 ## 二 详细介绍🌟
 
 可以结合这篇文章进行阅读 ：https://juejin.im/post/5e7330c36fb9a07cd248ef00
+
+关于bpmn-js如何使用建议搭建去github上面搜索，这里贴上官网地址： https://github.com/bpmn-io/bpmn-js
+
+官网案例地址：https://github.com/bpmn-io/bpmn-js-examples
 
 由于bpmn-js官方是适配camunda的，所以对activiti存在不兼容的地方，为了让bpmn-js能使用activiti，我们需要在BpmnModeler中扩展activiti 主要代码如下：
 ``` bash
@@ -261,7 +265,7 @@ watch: {
 
 ### 6 如何添加自定义的标签🌟
 
-我建议你看：https://github.com/bpmn-io/bpmn-js-examples/tree/master/custom-meta-model
+我建议你看：![自定义元模型示例](https://github.com/bpmn-io/bpmn-js-examples/tree/master/custom-meta-model)
 
 ### 7 如何添加多实例🌟
 
@@ -286,7 +290,7 @@ bpmnModeler._definitions.rootElements[0]
 ### 9 如何给节点的同级添加节点
 
 **例如：**
-![](./static/process-design2.png)
+![](https://github.com/griabcrh/vue-activiti-demo/blob/master/vue-activiti-demo/static/process-design2.png)
 
 给SequenceFlow的同级添加了BoundaryEvent,只要获取根节点下的所有节点然后push进入你添加的节点就行了
 ``` bash
@@ -303,7 +307,7 @@ bpmnModeler._definitions.rootElements[0].flowElements.push(boundaryEvent);
 
 如果你有好的解决方案欢迎私我，让我学习学习🤔️
 
-针对后端开发程序员们，我也真整理了后端springboot + activiti的demo；其中介绍了如何解析自定义的属性、如何扩展解析器📒
+针对后端开发程序员们，我也真整理了后端springboot + activiti的demo；其中介绍了如何解析自定义的属性、如何扩展解析器📒，地址：![后端demo](https://github.com/griabcrh/vue-activiti-demo/tree/master/vue-activiti-service-demo)
 
 针对react + bpmn-js 的项目请从我的github上找
 
