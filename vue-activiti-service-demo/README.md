@@ -1,4 +1,4 @@
-# vue-activiti-service-demo
+# 前端：vue+bpmn-js实现activiti的流程设计器，后端Springboot+Activiti开发工作流
 
 > springboot + activiti 项目
 

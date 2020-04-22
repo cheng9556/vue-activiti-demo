@@ -1,4 +1,4 @@
-# 前端：vue+webpack,后端springboot+activiti
+# 前端：vue+bpmn-js实现activiti的流程设计器，后端Springboot+Activiti开发工作流
 
 > 前端：vue + bpmn-js项目，实现activiti设计器， 后端： springboot + activiti 
 
