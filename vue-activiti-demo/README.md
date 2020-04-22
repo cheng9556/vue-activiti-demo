@@ -263,7 +263,7 @@ watch: {
 
 ### 6 如何添加自定义的标签🌟
 
-我建议你看：![自定义元模型示例](https://github.com/bpmn-io/bpmn-js-examples/tree/master/custom-meta-model)
+我建议你看：[自定义元模型示例](https://github.com/bpmn-io/bpmn-js-examples/tree/master/custom-meta-model)
 
 ### 7 如何添加多实例🌟
 
