@@ -1,18 +1,16 @@
-# 前端：vue+webpack,后端springboot+activiti
+# vue-activiti-demo
 
-> 前端：vue + bpmn-js项目，实现activiti设计器， 后端： springboot + activiti 
+> vue + bpmn-js项目，实现activiti设计器
 
-鉴于广大程序员们开发设计器苦不堪言以及后端不知道怎么解析自定义属性，于是我就开发了这个基础版本的demo，供广大程序员们学习用，如果有问题请在issue中提问👏👏👏
+鉴于广大程序员们开发设计器苦不堪言，于是我就开发了这个基础版本的demo，供广大程序员们学习用，如果有问题请在issue中提问👏👏👏
 
 项目中有什么问题欢迎指出，也欢迎👏👏👏大家帮我一起完善demo
 
 看我这么辛苦为你们整理demo，不给个star你们肯定都不好意思😄😄😄
 
-如果你是后端开发，请从最后面开始往上看😄
-
 ![流程图](./static/process-design1.png)
 
-## 一 前端启动项目🌟
+## 一 启动项目🌟
 
 ``` bash
 # install dependencies
@@ -108,7 +106,7 @@ this.bpmnModeler = new BpmnModeler({
 ```
 
 
-**例子**： 我的项目中需要给用户任务添加自定义的属性 nodeType(节点类型)
+例子： 我的项目中需要给用户任务添加自定义的属性 nodeType(节点类型)
 
 ``` bash
 {
@@ -133,12 +131,12 @@ this.bpmnModeler = new BpmnModeler({
 拿左侧工具栏来说，前端vue-activiti-demo项目：src/edit-modeler/js/customController/CustomPalette.js文件
 
 
-**问：**
+问：
 
 可以看到我自定义了用户任务和调用活动节点，其他的节点我用bpmn-js自带的；
 那如果我不想用bpmn-js自带的怎么办呢？
 
-**解答**：
+解答：
 
 src/edit-modeler/js/customController/index.js文件
 ``` bash
@@ -154,7 +152,7 @@ export default {
 
 这里用的是customPalette，如果要完全自定义则换成paletteProvider;
 
-**同理**：完全自定义contextPad用contextPadProvider,完全自定义属性面板用propertiesProvider
+同理：完全自定义contextPad用contextPadProvider,完全自定义属性面板用propertiesProvider
 
 ``` bash
 import CustomContextPad from './CustomContextPad';
@@ -169,13 +167,13 @@ export default {
 
 ### 3 关于属性前缀🌟
 
-**问：**
+问：
 
 我们都知道，bpmn-js生成的xml文件属性前缀都是camunda，那如何换成我们需要的前缀呢？
 
-**答：**
+答：
 
-**有两种方法**
+有两种方法
 
 一种是扩展json文件，例如我们需要activiti前缀就扩展了activiti.json
 
@@ -212,7 +210,7 @@ modeling.updateProperties(element, {
 
 ### 4 由于属性面板是自定义的，修改了属性面板的属性值，如何同步到xml中；以及我在图形上修改了属性如何同步属性面板🌟
 
-项目是vue架构，那就充分发挥vue的优势: **监听**
+项目是vue架构，那就充分发挥vue的优势: 监听
 
 部分代码如下：
 
@@ -285,7 +283,7 @@ bpmnModeler._definitions.rootElements[0]
 
 ### 9 如何给节点的同级添加节点
 
-**例如：**
+例如：
 ![](./static/process-design2.png)
 
 给SequenceFlow的同级添加了BoundaryEvent,只要获取根节点下的所有节点然后push进入你添加的节点就行了
